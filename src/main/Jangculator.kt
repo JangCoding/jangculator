@@ -22,12 +22,12 @@ class Calculator(){
         var o:String?=null
         while(true) {
             try {
-                print("연산자( + - * / )를 입력해주세요 : ")
+                print("연산자( + - * / % )를 입력해주세요 : ")
                 o = readLine()
             } catch (e : Exception) {
                 println("유효한 연산자가 아닙니다. 다시 입력하세요.")
             }
-            if(o in setOf("+", "-", "*", "/"))
+            if(o in setOf("+", "-", "*", "/", "%"))
                 break
             else
                 println("유효한 연산자가 아닙니다. 다시 입력하세요.")
@@ -38,7 +38,7 @@ class Calculator(){
     fun calculate():Double{
         println("[첫 번째 수]")
         num1 = inputNum()
-        println("[연산자( + - * / )]")
+        println("[연산자( + - * / % )]")
         oper = inputOper()
         println("[두 번째 수]")
         num2 = inputNum()
@@ -48,6 +48,7 @@ class Calculator(){
             "-" -> return num1 - num2
             "*" -> return num1 * num2
             "/" -> return num1 / num2
+            "%" -> return num1 % num2
         }
         return 0.0;
     }
