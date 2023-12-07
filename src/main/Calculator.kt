@@ -20,19 +20,19 @@ class Calculator(){
     }
 
     fun addOperation(addOp:AddOperation, _n1:Double, _n2:Double):Double{
-        var result = addOp.operate(_n1, _n2)
+        var result = addOp.operation(_n1, _n2)
         return result
     }
     fun subsOperation(subsOp:SubsOperation, _n1:Double, _n2:Double):Double{
-        var result = subsOp.operate(_n1, _n2)
+        var result = subsOp.operation(_n1, _n2)
         return result
     }
     fun multOperation(multOp:MultOperation, _n1:Double, _n2:Double):Double{
-        var result = multOp.operate(_n1, _n2)
+        var result = multOp.operation(_n1, _n2)
         return result
     }
     fun divOperation(divOp:DivOperation, _n1:Double, _n2:Double):Double{
-        var result = divOp.operate(_n1, _n2)
+        var result = divOp.operation(_n1, _n2)
         return result
     }
 
