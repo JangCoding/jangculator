@@ -11,9 +11,9 @@ class Calculator(){
 
         when(oper) {
             "+" -> return addOperation(AddOperation(), num1, num2)
-            "-" -> return num1 - num2
-            "*" -> return num1 * num2
-            "/" -> return num1 / num2
+            "-" -> return subsOperation(SubsOperation(), num1, num2)
+            "*" -> return multOperation(MultOperation(), num1, num2)
+            "/" -> return divOperation(DivOperation(), num1, num2)
 //            "%" -> return num1 % num2
         }
         return 0.0;
