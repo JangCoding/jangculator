@@ -10,15 +10,15 @@ class Calculator(){
         var num2 = getInput().inputNum()
 
         when(oper) {
-            "+" -> return Operation(AddOperation(), num1, num2)
-            "-" -> return Operation(SubsOperation(), num1, num2)
-            "*" -> return Operation(MultOperation(), num1, num2)
-            "/" -> return Operation(DivOperation(), num1, num2)
+            "+" -> return operation(AddOperation(), num1, num2)
+            "-" -> return operation(SubsOperation(), num1, num2)
+            "*" -> return operation(MultOperation(), num1, num2)
+            "/" -> return operation(DivOperation(), num1, num2)
 //            "%" -> return num1 % num2
         }
         return 0.0
     }
-    fun Operation(ao:AbstractOperation, _n1:Double, _n2:Double):Double {
+    fun operation(ao:AbstractOperation, _n1:Double, _n2:Double):Double {
         var result = ao.operation(_n1, _n2)
         return result
     }

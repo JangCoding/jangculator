@@ -1,19 +1,16 @@
 package etc
+
 class Solution {
-    fun solution(n: Int): Boolean {
-        var answer = false
-        var hap:Int =0
-        var arr = n.toString().toList()
-        arr.forEach(){
-            hap += it.toString().toInt()
-        }
-        if(n % hap == 0)
-            answer=true
-        return answer
+    fun solution(phone_number: String): String {
+        var answer = ""
+        answer = "*".repeat(phone_number.length-4) + phone_number.substring(phone_number.length-4)
+            return answer
     }
 }
+
 fun main()
+
 {
     var s = Solution()
-    println(s.solution(13))
+    println(s.solution("123456789"))
 }
